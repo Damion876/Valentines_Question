@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="containter">
+        <h2 class="celebration-text">Awesome!!!</h2> <br>
+        <h1 class="celebration-text">Happy Valentine's Day Babe!!!</h1> <br>
+        <img src="Pngtree valentines day red and pink_20303425.png" alt="Valentine's Day Image" class="celebration-image">
+    </div>
+    
+    <script>
+        // Create falling hearts effect on page load
+        function createHearts() {
+            const hearts = ['❤️', '💗', '💖', '💝', '💕'];
+            for (let i = 0; i < 40; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'confetti-piece';
+                heart.style.left = Math.random() * 100 + '%';
+                heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+                heart.style.animation = `confettiFall ${3 + Math.random() * 2}s ease-in forwards`;
+                heart.style.animationDelay = Math.random() * 0.5 + 's';
+                document.body.appendChild(heart);
+            }
+        }
+        
+        createHearts();
+    </script>
+    
+</body>
+</html>
